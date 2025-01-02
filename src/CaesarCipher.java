@@ -4,7 +4,7 @@ public class CaesarCipher {
             "абвгдеёжзийклмнопрстуфхцчшщъыьэюя" + "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ" +
             ".,\":!? +-*/\\@#$%^&(){}[];'|`~=_©«»—…" + "0123456789" + "\u00A0" + (char) 10 + (char) 13;
 
-    public String encrypt(String message, int key) {
+    public static String encrypt(String message, int key) {
         StringBuilder builder = new StringBuilder();
         for (char aChar : message.toCharArray()) {
             int index = ALPHABET.indexOf(aChar);
@@ -17,7 +17,7 @@ public class CaesarCipher {
         return builder.toString();
     }
 
-    public String decrypt(String message, int key) {
+    public static String decrypt(String message, int key) {
         return encrypt(message, key * (-1));
     }
 

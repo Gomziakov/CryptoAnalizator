@@ -7,11 +7,11 @@ public class ConsoleHelper {
 
     private static final BufferedReader CONSOLE = new BufferedReader(new InputStreamReader(System.in));
 
-    public void writeMessage(String message) {
+    public static void writeMessage(String message) {
         System.out.println(message);
     }
 
-    public String readString() {
+    public static String readString() {
         String string;
         try {
             string = CONSOLE.readLine();
@@ -22,7 +22,7 @@ public class ConsoleHelper {
         return string;
     }
 
-    public int readInt() {
+    public static int readInt() {
         int number;
         try {
             number = Integer.parseInt(readString());
@@ -33,7 +33,7 @@ public class ConsoleHelper {
         return number;
     }
 
-    public Path buildFileName(String path, String suffix) {
+    public static Path buildFileName(String path, String suffix) {
         Path fullPath = Path.of(path);
         Path parent = fullPath.getParent();
         String fileName = fullPath.getFileName().toString();

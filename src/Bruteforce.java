@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Bruteforce {
 
-    private final CaesarCipher caesar = new CaesarCipher();
+    private static final CaesarCipher caesar = new CaesarCipher();
     private static final int MAX_WORD_LENGTH = 28;
 
     public void bruteforce() {

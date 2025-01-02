@@ -3,7 +3,7 @@ import java.nio.file.Path;
 
 public class EncryptedDecrypted {
 
-    private final CaesarCipher caesar = new CaesarCipher();
+    private static final CaesarCipher caesar = new CaesarCipher();
 
     public void encryptedDecrypted(boolean flag) {
 
